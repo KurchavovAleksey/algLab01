@@ -10,7 +10,8 @@ def main():
 
     not_exist_flag = True
 
-    if sides[0] + sides[1] > sides[2] and sides[2] + sides[1] > sides[0] and sides[0] + sides[2] > sides[1]:
+    sides.sort()
+    if sides[0] + sides[1] > sides[2]:
         not_exist_flag = False
 
     print(f'Треугольник с такими сторонами {"не существует" if not_exist_flag else "существует"}')
